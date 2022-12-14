@@ -12,11 +12,12 @@ public class GUIUtils extends MyBankGUI{
     }
 
     protected static void updateCheckBalanceLabel() {
-        balanceLabel.setText("Balance: " + checkAccount.getBalance().getWalletValueinUSD());
+        System.out.println("a");
+        balanceLabel.setText("Balance: " + checkAccount.getBalance().getCurrencyList().get(0).getQuantity());
     }
 
     protected static void updateSaveBalanceLabel() {
-        balanceLabel.setText("Balance: " + saveAccount.getBalance().getWalletValueinUSD());
+        balanceLabel.setText("Balance: " + saveAccount.getBalance().getCurrencyList().get(0).getQuantity());
     }
 
 

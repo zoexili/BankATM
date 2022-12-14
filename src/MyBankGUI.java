@@ -248,7 +248,7 @@ public class MyBankGUI extends JFrame implements ItemListener {
 		checkingAccount.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				checkAccount = new Checking();
+			//	checkAccount = new Checking();
 				cl.show(cards, CheckAccountMenuPanel);
 			}
 		});
@@ -300,7 +300,7 @@ public class MyBankGUI extends JFrame implements ItemListener {
 			if (withdrawText.getText().isEmpty()) {
 				JOptionPane.showMessageDialog(frame, "Please enter a valid number.");
 			}
-			else if (GUIUtils.getAmount(withdrawText) > checkAccount.getBalance().getWalletValueinUSD()) {
+			else if (GUIUtils.getAmount(withdrawText) > checkAccount.getBalance().getCurrencyList().get(0).getQuantity()) {
 				JOptionPane.showMessageDialog(frame, "You cannot withdraw cash amount larger than your current balance.");
 			}
 			else if (GUIUtils.getAmount(withdrawText) <= 0) {

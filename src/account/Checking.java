@@ -20,17 +20,19 @@ public class Checking extends Account {
 
     //Methods
     public void withdraw(Balance balance) throws BalanceInsufficientException, CurrencyNotFoundException {
-        //We remove the fee from the deposit amount
-        balance.substractbalance(new Currency("USD", "USD", Account.FEE_TRANSACTION_WITHDRAWAL_DEPOSIT));
         //We subtract the balance to the account.
-        this.getBalance().substractbalance(new Currency("USD", "USD", balance.getWalletValueinUSD()));
+        this.getBalance().substractbalance(new Currency("USD", "USD", balance.getCurrencyList().get(0).getQuantity()));
+        //We remove the fee from the deposit amount
+        this.getBalance().substractbalance(new Currency("USD", "USD", Account.FEE_TRANSACTION_WITHDRAWAL_DEPOSIT));
+
     }
 
     public void deposit(Balance balance) throws BalanceInsufficientException, CurrencyNotFoundException {
-        //We remove the fee from the deposit amount
-        balance.substractbalance(new Currency("USD", "USD", Account.FEE_TRANSACTION_WITHDRAWAL_DEPOSIT));
         //We add the balance to the account.
         this.getBalance().addbalance(new Currency("USD", "USD", balance.getWalletValueinUSD()));
+        //We remove the fee from the deposit amount
+        this.getBalance().substractbalance(new Currency("USD", "USD", Account.FEE_TRANSACTION_WITHDRAWAL_DEPOSIT));
+
     }
 
     public void payLoan(Loan loan, Balance balance) throws BalanceInsufficientException, CurrencyNotFoundException {

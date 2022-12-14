@@ -10,14 +10,19 @@ import java.util.List;
 public class Balance{
 
     private List<Currency> currencyList;
+
+
     private double walletValueinUSD;
 
     public Balance(double walletValueinUSD) {
         this.walletValueinUSD = walletValueinUSD;
+        List<Currency> currencies=new ArrayList<>();
+        currencies.add(new Currency("USD",0));
+        this.currencyList=currencies;
     }
 
     public Balance() {
-        this.walletValueinUSD = 0;
+        this.walletValueinUSD = walletValueinUSD;
         List<Currency> currencies=new ArrayList<>();
         currencies.add(new Currency("USD",0));
         this.currencyList=currencies;
@@ -45,6 +50,7 @@ public class Balance{
                 return;
             }
         }
+        setWalletValueinUSD();
         currencyList.add(currency);
     }
 
@@ -55,6 +61,7 @@ public class Balance{
                 if (cur.getQuantity()>currency.getQuantity())
                 {
                     cur.setQuantity(cur.getQuantity()-currency.getQuantity());
+
                     return;
                 }
                 else {
