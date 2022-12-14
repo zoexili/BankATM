@@ -1,5 +1,4 @@
 import javax.swing.*;
-import javax.swing.table.AbstractTableModel;
 
 public class GUIUtils extends MyBankGUI{
     protected GUIUtils() {
@@ -12,7 +11,14 @@ public class GUIUtils extends MyBankGUI{
         return d;
     }
 
-    protected static void updateBalanceLabel() {
-        balanceLabel.setText("Balance: " + account.getBalance());
+    protected static void updateCheckBalanceLabel() {
+        balanceLabel.setText("Balance: " + checkAccount.getBalance().getWalletValueinUSD());
     }
+
+    protected static void updateSaveBalanceLabel() {
+        balanceLabel.setText("Balance: " + saveAccount.getBalance().getWalletValueinUSD());
+    }
+
+
+
 }

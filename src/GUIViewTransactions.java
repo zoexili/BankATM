@@ -7,6 +7,7 @@ public class GUIViewTransactions extends MyBankGUI {
     }
 
     protected static void viewTransactions(JScrollPane pane) {
+
         JTable tbl = new JTable();
         Object[] columns = {"Transaction Type", "Amount", "Remaining Balance"};
         DefaultTableModel model = new DefaultTableModel();
@@ -45,7 +46,10 @@ public class GUIViewTransactions extends MyBankGUI {
         });
 
 
-        p20 = pane;
+//        historyBack = new JButton("Back to Main Menu");
+//        panel.add(historyBack);
+
+        p50 = pane;
 
     }
 }

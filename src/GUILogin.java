@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -33,10 +32,12 @@ public class GUILogin extends MyBankGUI{
         // Create the log in and register buttons
         logIn = new JButton("User Login");
         register = new JButton("Register");
+        administratorLogIn = new JButton("Administrator Login");
 
         // Add each button to the panel
         panel.add(logIn);
         panel.add(register);
+        panel.add(administratorLogIn);
 
         // Connect button action to event - each event is an object of a class
         loginListener login = new loginListener();

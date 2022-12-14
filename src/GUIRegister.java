@@ -11,7 +11,7 @@ public class GUIRegister extends MyBankGUI{
         firstName.setBounds(10, 20, 80, 25);
         panel.add(firstName);
 
-        JTextField firstNameText = new JTextField(20);
+        firstNameText = new JTextField(20);
         firstNameText.setBounds(100, 20, 165, 25);
         panel.add(firstNameText);
 
@@ -20,7 +20,7 @@ public class GUIRegister extends MyBankGUI{
         lastName.setBounds(10, 20, 80, 25);
         panel.add(lastName);
 
-        JTextField lastNameText = new JTextField(20);
+        lastNameText = new JTextField(20);
         lastNameText.setBounds(100, 20, 165, 25);
         panel.add(lastNameText);
 
@@ -29,7 +29,7 @@ public class GUIRegister extends MyBankGUI{
         email.setBounds(10, 20, 80, 25);
         panel.add(email);
 
-        JTextField emailText = new JTextField(20);
+        emailText = new JTextField(20);
         emailText.setBounds(100, 20, 165, 25);
         panel.add(emailText);
 

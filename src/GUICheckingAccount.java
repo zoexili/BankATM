@@ -1,12 +1,12 @@
 import javax.swing.*;
 
-public class GUIAccount extends MyBankGUI{
-    protected GUIAccount() {
+public class GUICheckingAccount extends MyBankGUI{
+    protected GUICheckingAccount() {
         super();
     }
 
-    protected static void createAccount(JPanel panel) {
-        JLabel msg = new JLabel("Hello! Welcome to your new bank account: ");
+    protected static void createCheckingAccount(JPanel panel) {
+        JLabel msg = new JLabel("Hello! Welcome to your new checking bank account: ");
         panel.add(msg);
         withdraw = new JButton("Withdraw Money");
         panel.add(withdraw);
